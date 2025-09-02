@@ -198,6 +198,7 @@ Book 3 - Loading the Main Game Content
 
 Part 1 - Locations
 
+A room can be restable. A room is usually not restable.
 Include Apocalypse Store by Omen.
 Include Approaching the Capitol Building by Guest Writers.
 Include Astor by Rikaeus.
@@ -254,6 +255,7 @@ Include Stablemasters by Sarokcat.
 Include Stables Hotel by Sarokcat.
 Include State Fair by Sarokcat.
 Include Subterranean Caves by Prometheus.
+Include Swamp Signpost by Voidsnaps.
 Include Tattoo Parlor by Sarokcat.
 Include Tiger Den by Luneth.
 Include Tyr's Club by Kaleem mcintyre.
@@ -507,6 +509,7 @@ Include Feral Wolf Herm by Prometheus.
 Include Feral Wolf Male by Prometheus.
 Include Ferret Infection by Luneth.
 Include Fever Dream by JP.
+Include Fire Alicorn by Shiru.
 Include Fire Elemental by Stripes.
 Include Fire Sprite by AGentlemanCalledB.
 Include Flaming Lynx by Stripes.
@@ -931,6 +934,7 @@ Include Lindsey by Prometheus.
 Include Lingau by Wahn.
 Include Logan by Wahn.
 Include Lucy by Stripes.
+Include Luke by Alexeo.
 Include Lumi by Prometheus.
 Include Lux & Umbra by Prometheus.
 Include Mack by Stripes.
@@ -1053,6 +1057,16 @@ Include Zephias by Wahn.
 Include Zigor by Stripes.
 Include Ziix by Voidsnaps.
 Include Zoe by Kernog.
+
+[Inactivated until further developments]
+[
+Include Beag Infection by OrangeHorned.
+Include Fathnach Infection by OrangeHorned.
+Include Giving Firbolg by OrangeHorned.
+Include Knott by OrangeHorned.
+Include Firbolg Quests by OrangeHorned.
+Include Firbolg Tapes by OrangeHorned.
+]
 
 Part 5 - Companions and Allies
 

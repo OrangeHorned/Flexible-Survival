@@ -75,6 +75,8 @@ Figure of FireSpriteMale_icon is the file "FireSprite_male.jpg".
 Figure of FluffyOwl_icon is the file "FluffyOwl.png".
 Figure of FluffyOwl2_icon is the file "FluffyOwl2.jpg".
 Figure of FrPony_icon is the file "fs_afriendshippony.jpg".
+Figure of Furling_clothed_icon is the file "Furling_clothed.jpg".
+Figure of Furling_naked_icon is the file "Furling_naked.jpg".
 Figure of GooGirl_icon is the file "GooGirl.jpg".
 Figure of BlueGryphon_icon is the file "BlueGryphon.jpg".
 Figure of BlueGryphon_face_icon is the file "BlueGryphon_face.jpg".
@@ -579,6 +581,10 @@ Figure of Marc_face_icon is the file "Marc_face.jpg".
 Figure of Marc_fucked_icon is the file "Marc_fucked.jpg".
 Figure of Mason_icon is the file "Mason.jpg".
 Figure of Medea_face_icon is the file "Medea_face.jpg".
+Figure of Meredith_naked_icon is the file "Meredith_naked.jpg".
+Figure of Meredith_clothed_icon is the file "Meredith_clothed.jpg".
+Figure of Meredith_preg_naked_icon is the file "Meredith_preg_naked.jpg".
+Figure of Meredith_preg_clothed_icon is the file "Meredith_preg_clothed.jpg".
 Figure of Mike_face_icon is the file "Mike_face.jpg".
 Figure of Mike_icon is the file "Mike.jpg".
 Figure of Mogdraz_clothed_icon is the file "Mogdraz_clothed.jpg".
@@ -1864,6 +1870,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Megakitty"	Figure of Megakitty_icon	"BushyCat"	g-white	"normal"
 "Mental Mouse"	Figure of MentalMice_icon	"Xilrayne"	g-white	"normal"
 "Messy Pig"	Figure of MessyPig_icon	"Anymouse1968"	g-white	"normal"
+"Meredith_naked"	Figure of Meredith_naked_icon	"SteppeCrow"	g-white	"normal"
+"Meredith_clothed"	Figure of Meredith_clothed_icon	"SteppeCrow"	g-white	"normal"
+"Meredith_preg_naked"	Figure of Meredith_preg_naked_icon	"SteppeCrow"	g-white	"normal"
+"Meredith_preg_clothed"	Figure of Meredith_preg_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Micaela"	Figure of Micaela_icon	"Kattzie"	g-white	"normal"
 "Mike_face"	Figure of Mike_face_icon	"SineAlas"	g-black	"normal"
 "Mike"	Figure of Mike_icon	"Darian821"	g-black	"normal"
@@ -2015,6 +2025,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Smooth Collie Shemale_naked"	Figure of Collie_naked_icon	"SteppeCrow"	g-white	"normal"
 "Cougar_clothed"	Figure of Cougar_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Cougar_naked"	Figure of Cougar_naked_icon	"SteppeCrow"	g-white	"normal"
+"Furling_clothed"	Figure of Furling_clothed_icon	"Buzzybub"	g-white	"normal"
+"Furling_naked"	Figure of Furling_naked_icon	"Buzzybub"	g-white	"normal"
 "Sewer Gator_hard"	Figure of Sewer_Gator_hard_icon	"SteppeCrow"	g-white	"normal"
 "Sewer Gator_soft"	Figure of Sewer_Gator_soft_icon	"SteppeCrow"	g-white	"normal"
 "Shy_vixen"	Figure of Shy_Vixen_icon	"Watsup"	g-white	"normal"
@@ -2761,6 +2773,7 @@ carry out artistcredits:
 	say "     Fluffy Owl 2 by Moirah @ https://furaffinity.net/user/moirah[line break]";
 	say "     Fluffy Owl by Waxraven/WXRVN @ https://waxraven.tumblr.com[line break]";
 	say "     Friendship Pony by Anymouse1968 @ https://furaffinity.net/user/anymouse1968[line break]";
+	say "     Furling by Buzzybub @ https://bsky.app/profile/buzzybub.bsky.social[line break]";
 	say "     Gazelle by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
 	say "     Gargoyle Stuck Threesome by EmieChii @ https://furaffinity.net/user/emiechii[line break]";
 	say "     German Shepherd by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
@@ -2977,6 +2990,7 @@ carry out artistcredits:
 	say "     Mareslut by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
 	say "     Mason by Vashaa @ https://furaffinity.net/user/vashaa[line break]";
 	say "     Medea by LocksTO @ https://furaffinity.net/user/locksto[line break]";
+	say "     Meredith by SteppeCrow @ https://furaffinity.net/user/steppecrow[line break]";
 	say "     Micaela by Kattzie @ https://furaffinity.net/user/kattzie[line break]";
 	say "     Mike (face) by SineAlas @ https://furaffinity.net/user/sinealas[line break]";
 	say "     Mike by Darian821 @ https://x.com/Darian821Jai821[line break]";
@@ -3098,7 +3112,7 @@ carry out ArtistBanning:
 	artistbanmenu;
 
 to artistbanmenu: [more compact version]
-	let artistlist be {"Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "BeaverTyan", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "CastBound", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "Corbee", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "DragonFlayer", "Dragonpunk", "Eevachu", "EmieChii", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "Moirah", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "Reaper3d", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "SonikkuDashu", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Sokan", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TylerAz", "Uniformvixen", "Unknown", "ValdericBlackstag", "Valen", "Vashaa", "Visage48", "Wahn", "Watsup", "Wemt", "Wolfram Rolf", "Xenotropos, Yora"};
+	let artistlist be {"Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "BeaverTyan", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Buzzybub", "Caltroplay", "Candy", "canned", "CastBound", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "Corbee", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "DragonFlayer", "Dragonpunk", "Eevachu", "EmieChii", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "Moirah", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "Reaper3d", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "SonikkuDashu", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Sokan", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TylerAz", "Uniformvixen", "Unknown", "ValdericBlackstag", "Valen", "Vashaa", "Visage48", "Wahn", "Watsup", "Wemt", "Wolfram Rolf", "Xenotropos, Yora"};
 	now calcnumber is -1;
 	let countnumber be 1;
 	let abmexit be 0;

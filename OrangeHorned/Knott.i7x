@@ -1,11 +1,14 @@
-Knott
+Version 1 of Knott by OrangeHorned begins here.
+
+[ HP of Knott    ]
+[   1 - Has met and seen post transformation             ]
+[   2 - Player has the book                              ]
+[   3 - Player gave him the book                         ]
+[ 100 - Player failed to get the book                    ]
+
 Table of GameCharacterIDs (continued)
 object	name
 Knott	"Knott"
-[ HP of Knott    ]
-[ 0 -  Has met and seen post transformation            ]
-[ 1 -  Has obtained book                ]
-
 
 Knott is a man. [Man or woman. Does not determine genitals, just how the game treats the character's default gender. It's not that deep.]
 ScaleValue of Knott is 4. [1 is teeny tiny. 2 is small. 3 is human sized. 4 is horse sized. 5 is absolutely massive.]
@@ -39,9 +42,10 @@ Virgin of Knott is true. [Self explanatory. Vaginal virginity. Set to true or fa
 AnalVirgin of Knott is false. [Same as above but for butts.]
 PenileVirgin of Knott is false. [Same as above but for dicks.]
 SexuallyExperienced of Knott is true. [How slutty a character is.]
-TwistedCapacity of Knott is truw. [Twisted Characters can take any penetration, no matter the size. Can be changed to allow you to make stomach bulging and other such scenes.]
+TwistedCapacity of Knott is true. [Twisted Characters can take any penetration, no matter the size. Can be changed to allow you to make stomach bulging and other such scenes.]
 Sterile of Knott is true. [steriles can't knock people up. Use to prevent pregnancies from a character.]
 MainInfection of Knott is "". [A character's infection. Case sensitive. Put the infection name here and that NPC may now infect the player, if the infection itself is infectious.]
+Description of Knott is "[Knottdesc]"; [Points to the character description.]
 
 Description of Knott is "[Knottdesc]"; [Points to the character description.]
 
@@ -78,7 +82,8 @@ say "     Start of conversation.";
 		now title entry is "Give Knott the book";
 		now sortorder entry is 4;
 		now description entry is "Give Knott the book he asked for.";
-
+	[]
+	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
 	say "[link]0 - Nevermind[as]0[end link][line break]";
@@ -97,13 +102,13 @@ say "     Start of conversation.";
 				if (nam is "Current Form"):
 					say "[KnottTalk2]";
 				if (nam is "Missing items"):
-				say "[KnottTalk3]";
-				if (nam is "Give Knott the book");
-				say "[KnottTalk4]";
+					say "[KnottTalk3]";
+				if (nam is "Give Knott the book"):
+					say "[KnottTalk4]";
 				wait for any key;
 		else if calcnumber is 0: [Plays if the player says nevermind.]
 			now sextablerun is 1;
-			say "     You step back from Knott, who looks at you a little funny. 'OK, nevermind, I guess?' he questions."; [The text for if you say "nevermind" instead of picking an option. Can be detailed if you want!]
+			say "     You step back from Knott, who looks at you a little funny. 'OK, never mind, I guess?' he questions."; [The text for if you say "nevermind" instead of picking an option. Can be detailed if you want!]
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
@@ -116,7 +121,7 @@ to say KnottTalk2:
 	say "     'Mostly probably doing what God possibly intended me to do, these people here need guidance, someone to talk to about all that ails them, they welcomed me with open arms, so they should only expect any who have walked the path of righteousness to help them out.' You ask a side question on what caused them to give up the priest's life, Knott's face lightens up as he tries to hide his humane impulse, 'I do not wish to speak of it, especially not right now in this given time, I just.... It comes with its own baggage you see? When I get more comfortable here maybe ill be in the mood for such gab'";
 
 to say KnottTalk3:
-	say "     You ask him aboutt he stuff he possibly left back at where he called safe haven before becoming a Firbolg, 'You would do that for a old man like me? I mean...' He gives you a look before pausing a bit... finally pursing his lips before continuing, 'This wont be a easy journey, theres something we were trying to run from there, some people in this... city... have given into the most rabbid of hedonisms. I doubt any you saw running with me went back there after the infected ferals routed us, but if you do go back... I had a book there that I was reading... if you could grab it for me, I would be forever in your debt'";
+	say "     You ask him about he stuff he possibly left back at where he called safe haven before becoming a Firbolg, 'You would do that for a old man like me? I mean...' He gives you a look before pausing a bit... finally pursing his lips before continuing, 'This wont be a easy journey, there's something we were trying to run from there, some people in this... city... have given into the most rabid of hedonisms. I doubt any you saw running with me went back there after the infected ferals routed us, but if you do go back... I had a book there that I was reading... if you could grab it for me, I would be forever in your debt'";
 
 to say KnottTalk4:
 	say "     you pull out the book you found from the High Rise District 'This book ... .I left it in one of the last places I went when I was still human. I have no clue what process you might have been through to get this, but I thank you.'";

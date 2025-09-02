@@ -87,13 +87,10 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 [The entire section on line 98-100 here creates a table entry for an infection to "live" in. Without it, the game will glitch. Never forget to add it for each infection! There's always a single empty line between the line of --s and the "choose" line below.]
 
-Choose a blank row from Table of Random Critters;
+when play begins:
+	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false; [This should always say False. You don't need to know why, just remember it!]
 	now Species Name entry is "Fathnach"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
-	add "Fathnach" to infections of NatureList;
-	add "Fathnach" to infections of MaleList;
-	add "Fathnach" to infections of Bovinelist;
-	add "Fathnach" to infections of MagicalList;
 	add "Fathnach" to infections of BipedalList;
 	add "Fathnach" to infections of OtherworldlyList;
 	add "Fathnach" to infections of HermList;
@@ -152,7 +149,6 @@ Choose a blank row from Table of Random Critters;
 	now body descriptor entry is "[one of]muscled[or]beefy[or]muscular[at random]";
 	now type entry is "Fathnach"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is true; [Whether the creature is magical or not.]
-	now resbypass entry is false; [Determines whether the creature can infect while ignoring the researcher feat. Usually false.]
 	now non-infectious entry is false; [A switch to determine whether the creature infects players who have sex with them.]
 	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
@@ -160,16 +156,6 @@ Choose a blank row from Table of Random Critters;
 	now BannedStatus entry is false; [Leave on false. The game will ban the character based on player choices.]
 
 Table of Game Objects (continued)
-name	desc	weight	object
-"Fathnach Tuft Hair"	"A tuft of fur that looks like it has been pulled out of the coat of a Fathnach. It's nicely soft."	0	Fathnach Tuft Hair
-
-Fathnach Tuft Hair is a grab object.
-Usedesc of Fathnach Tuft Hair is "[FathnachFurUse]".
-It is temporary.
-
-to say FathnachFurUse:
-	say "     Holding the tuft of fur between your fingers, you stroke over it, its rugged feeling seeps into your fingers. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
-	infect "Fathnach";
 
 instead of sniffing Fathnach Tuft Hair:
 	say "     The fur has a very strong, animal-like scent.";
@@ -179,27 +165,12 @@ name	desc	weight	object
 "Fathnach Cum Pollen"	"A plastic bottle containing cum with bits of yellow pollen orbs inside, labeled 'Fathnach Cum Pollen'."	0	Fathnach Cum Pollen
 
 Fathnach cum is a grab object.
-Fathnach cum is cum.
 Fathnach cum is infectious.
 Strain of Fathnach cum is "Fathnach".
 Usedesc of Fathnach cum is "[FathnachCumPollenuse]".
 
 to say FathnachCumPollenuse:
 	say "Lifting the plastic bottle to your mouth may have not been the best idea, but it sure tastes like it. A sweet tasting honeydew with a hint of floral notes spreads into your body, you feel yourself tingling all over with excitement- almost with a thirst for more.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"Fathnach milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Fathnach Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	Fathnach milk
-
-Fathnach milk is a grab object.
-Fathnach milk is milky.
-Fathnach milk is infectious.
-Strain of Fathnach milk is "Fathnach".
-Usedesc of Fathnach milk is "[FathnachMilkuse]".
-
-to say FathnachMilkuse:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;

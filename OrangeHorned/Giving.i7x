@@ -1,4 +1,4 @@
-Version 1 of Giving Firbolg by OrangeHorned begins here.
+Version 1 of Giving by OrangeHorned begins here.
 
 [ HP of Giving Firbolg    ]
 [ 0 -  Not Met            ]
@@ -50,9 +50,6 @@ TwistedCapacity of GivingFirbolg is false. [Twisted Characters can take any pene
 Sterile of GivingFirbolg is true. [steriles can't knock people up]
 MainInfection of GivingFirbolg is "".
 Description of GivingFirbolg is "[Givingdesc]".
-Conversation of GivingFirbolg is { "" }.
-
-the scent of the GivingFirbolg is "     Giving smells like he's almost drenched in what you could describe as some sort of irish soap. Very much herbal and sea-salty in all the right ways. It might be from all the sweat caked on his body."
 
 to say Givingdesc:
 	if debugactive is 1:
@@ -179,7 +176,7 @@ to say GivingSexMenu:
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
-			say "     You step back from the firbolg, shaking your head slightly as he gives a questioning look.";
+			say "	 You step back from the firbolg, shaking your head slightly as he gives a questioning look.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
@@ -203,4 +200,4 @@ to say GivingSex1: [Firbolg Breeding] [Requires Cock, need something to stop pla
 Section 3 - Events
 
 
-Giving Firbolg ends here.
+Giving ends here.
