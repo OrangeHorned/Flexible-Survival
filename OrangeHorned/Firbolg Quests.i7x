@@ -93,71 +93,50 @@ now HP of GivingFirbolg is 2;
 
 Table of GameEventIDs (continued)
 Object    Name
-EventName    "The Elusive Book"
+EventName    "Elusive Book"
 
 EventName is a situation.
-ResolveFunction of EventName is "[ResolveEvent The Elusive Book]".
-The level of EventName is 5.
-Sarea of EventName is "High".
-when play begins: [Any tags that the player can ban that are relevant to the event] 
-    add EventName to BadSpots of DemonList;
-    add EventName to BadSpots of TaurList;
-    add EventName to BadSpots of MaleList;
-    add EventName to BadSpots of FurryList;
+ResolveFunction of EventName is "[ResolveEvent Elusive Book]".
+The level of Elusive Book is 5.
+Sarea of Elusive Book is "High".
+when play begins: [Any tags that the player can ban that are relevant to the event]
+	add Elusive Book to BadSpots of DemonList;
+	add Elusive Book to BadSpots of TaurList;
+	add Elusive Book to BadSpots of MaleList;
+	add Elusive Book to BadSpots of FurryList;
 
-to say ResolveEvent Difficult Quarry:
-    say "     Something about the circumstances as to why you were here has your body in a cold sweat to every random noise in this oddly quiet section of the city. From what Knott and Giving had said, it was in some building with a large broken hole in it.";
-
-     say "The moment you find the most familiar thing to it, you peer inside to see a space that is almost like a model apartment, everything here was either torn up, musky, or moldy from all the fluids all over the place.
-Grazing over the place, you spend the next few minutes in silence going up floors of quiet-nothingness, until eventually  spotting what definitely is the remains of some survivor hangout on the 5th floor. Finding the book is the easy part as it lay on one of the tables to a kitchen set, the hard part was the current problem now of someone else on the floor stumbling in a hazed panic from something.";
-WaitLineBreak;
-     say"It looks like a college survivor, the last few days have not treated them well, his torn shirt and sunken eyes a product of his tragedy.
-
-‘Hmhm, I don't know why you're running, I said I would help you didnt I?’
-
-A baritone voice called out from the stairwell the man ran out of, the next person…. No… humanoid casually strides out, their black sclera and golden iris showing their otherworldly nature.
-
-‘Fuck! I dont need any more help, ok!?? Just leave!’
-
-‘What kind of man would I be to leave a boy like you all alone in this dangerous place?~’
-
-The man continued to click his boots on the floor, stalking his prey
-
-‘....So you did see what I did to your cocktease of a mother then, no need to play coy now do I’
-
-An empty trash bin crashed into the demon’s face, their body did not flinch at all from the impact.
-
-‘I dont care if I even win or lose, I swear ill kill you if you get any closer!’
-
-His frantic breaths and trembling hands show a lack of fighting spirit to follow through with his claim. Whatever he saw destroyed whatever remains of his sanity to survive this situation
-
-The blue-skinned incubi gives a deep-hearted chuckle, fiddling with a whip on their waist- tried around only a fundoshi that had strange marking all over. His steps on the floor circle his prey  into a corner.";
-     say "‘Boy, listen, you must know this is the end of days right? Everyone is having fun while you keep struggling fruitlessly, its just pathetic. If anything, I'm saving you from your boredom to see a new world that you once feared with all your heart… your mother thought the same when I was on top… didn't you hear how her terror turned quickly into enjoyment? If you stayed longer… you would have heard her beg me to do the same to you~’
-
-
-The poor man’s ejects deject from the situation, tears flow down his cheeks… yet no cry was heard. After losing all hope, he falls to his knees, giving his enemy the advantage.  The demon shifts his forms to have a centaur’s lower body, standing over him with the same, calm, expression.
-
-‘You humans and happiness… your always afraid of being too happy, this nanite infection really has opened many of your eyes… and its going to open yours too in a moment.’
-
-‘Travis….why….why are you doing this, why are any of you doing this?’
-
-‘What was it your founding fathers said? The Pursuit of Happiness? I just wanted to, thats all~’
-
-You need to leave, he's clearly the one the two warned you about, but the poor man looks far too dejected to stop his purserer";
-
-   say "     [bold type]Despite knowing the danger, what do you wish to do?[roman type][line break]";
-	 let ElusiveBook_Choices be a list of text;
-    add "Flee the scene" to ElusiveBook_Choices;
-    add "Fight through the gauntlet" to ElusiveBook_Choices;
-    add "Observe what happens" to ElusiveBook_Choices;
-    let ElusiveBook_Choice be what the player chooses from ElusiveBook_Choices;
-    if ElusiveBook_Choice is:
-        -- "Flee the scene":
-            say "You decide this is too dangerous and make a run for it, leaving the survivor to their fate. The faint moans of the survivor and the demonic horseman echo in your ears as you run away.";
-            now Resolution of The Elusive Book is 1; [or whatever value you want to track]
+to say ResolveEvent Elusive Book:
+	say "     Something about the circumstances as to why you were here has your body in a cold sweat to every random noise in this oddly quiet section of the city. From what Knott and Giving had said, it was in some building with a large broken hole in it. The moment you find the most familiar thing to it, you peer inside to see a space that is almost like a model apartment, everything here was either torn up, musky, or moldy from all the fluids all over the place. Grazing over the place, you spend the next few minutes in silence going up floors of quiet-nothingness, until eventually spotting what definitely is the remains of some survivor hangout on the 5th floor. Finding the book is the easy part as it is lying on one of the tables to a kitchen set, the hard part is the current problem now of someone else on the floor stumbling in a hazed panic from something. It looks like a college survivor, but the last few days have not treated them well, his torn shirt and sunken eyes a product of his tragedy.";
+	WaitLineBreak;
+	say "     'Hmhm, I don't know why you're running, I said I would help you didnt I?' a baritone voice calls out from the stairwell that the man ran out of, the next person... No... humanoid casually strides out, their black sclera and golden iris showing their otherworldly nature.";
+	LineBreak;
+	say "     'Fuck! I dont need any more help, ok!?? Just leave!' the survivor shouts back.";
+	LineBreak;
+	say "     'What kind of man would I be to leave a boy like you all alone in this dangerous place?~' the man continues, his boots clicking on the floor, stalking his prey. '...So you did see what I did to your cocktease of a mother then, no need to play coy now do I?' An empty trash bin crashes into the demon's face, yet their body does not flinch at all from the impact.";
+	LineBreak;
+	say "     'I don't care if I even win or lose, I swear I'll kill you if you get any closer!' the [']prey['] threatens, though his frantic breaths and trembling hands show a lack of fighting spirit to follow through with his claim. Whatever he saw destroyed whatever remains of his sanity to survive this situation.";
+	WaitLineBreak;
+	say "     The blue-skinned incubi gives a deep-hearted chuckle, fiddling with a whip on their waist - tied around only a fundoshi that had strange marking all over. His steps on the floor circle his prey  into a corner. 'Boy, listen, you must know this is the end of days, right? Everyone is having fun while you keep struggling fruitlessly, it's just pathetic. If anything, I'm saving you from your boredom to see a new world that you once feared with all your heart... your mother thought the same when I was on top... didn't you hear how her terror turned quickly into enjoyment? If you stayed longer... you would have heard her beg me to do the same to you~'";
+	say "     The poor man is dejected from the situation, tears flow down his cheeks... yet no cry is heard. After losing all hope, he falls to his knees, giving his enemy the advantage.  The demon shifts his form to have a centaur's lower body, standing over him with the same, calm, expression. 'You humans and happiness... your always afraid of being too happy, this nanite infection really has opened many of your eyes... and its going to open yours too in a moment.'";
+	LineBreak;
+	say "     'Travis....why....why are you doing this, why are any of you doing this?'";
+	LineBreak;
+	say "     'What was it your founding fathers said? The Pursuit of Happiness? I just wanted to, thats all~'";
+	WaitLineBreak;
+	say "     You need to leave, he's clearly the one the two warned you about, but the poor man looks far too dejected to stop his pursuer.";
+	say "     [bold type]Despite knowing the danger, what do you wish to do?[roman type][line break]";
+	let ElusiveBook_Choices be a list of text;
+	add "Flee the scene" to ElusiveBook_Choices;
+	add "Fight through the gauntlet" to ElusiveBook_Choices;
+	add "Observe what happens" to ElusiveBook_Choices;
+	let ElusiveBook_Choice be what the player chooses from ElusiveBook_Choices;
+	if ElusiveBook_Choice is:
+		-- "Flee the scene":
+			say "     You decide this is too dangerous and make a run for it, leaving the survivor to their fate. The faint moans of the survivor and the demonic horseman echo in your ears as you run away.";
+			now Resolution of The Elusive Book is 1; [or whatever value you want to track]
 			now HP of Knott is 1;
-        -- "Fight through the gauntlet":
-            say "You steel yourself coming out of hiding 'oh~? A brave one, I like that~' The demon horseman turns to you, before snapping his fingers, 'Im a little busy, so why dont you play with another one of my friends?";
+		-- "Fight through the gauntlet":
+			say "     You steel yourself coming out of hiding 'oh~? A brave one, I like that~' The demon horseman turns to you, before snapping his fingers, 'Im a little busy, so why dont you play with another one of my friends?";
 			challenge "Peacock";
 			fightoutcome is 30; [Player won]
 			say "     You quickly dispatch the peacock, but not before hearing the survivor's moans of pleasure as the demonic horseman continues to ravage him. Even as you try to get in the way you hear his screams of pain already turned to moans, theres nothing you can do now as they happy push back to the flared cock of the demonic horseman, his hands gripping the survivor's new body as he pounds into them with a feral intensity. 'Darling~ why dont you just find something else to do? cant you see were busy?' Quickly grabbing you book, you give the demon a sneer before exiting, your not happy at all with this outcome, but for now you know you didnt come here to settle the score. He will pay.";
@@ -165,61 +144,37 @@ You need to leave, he's clearly the one the two warned you about, but the poor m
 			now HP of Knott is 1;
 			else if fightoutcome > 19 and fightoutcome < 30: [player lost]
 			or fightoutcome is 30: [Player fled]
-			say "    Before the cultist of the horseman can prey on its new victim, a moan from the young man distracts you both, the deed of transforming him was done all while you scuffled with the peacock. The demonic horseman looks at you with a grin, 'Oh~? I guess you were too late to save him, but I do appreciate the effort~' He turns back to the survivor, who is now on all fours, his body shifting and changing as he becomes a new creature of the city.";
-			say "    The cultust goes to take their mouth as Travis continues fucking into their new mate, with what little strength you have left, you quickly leave them to their fate. The sounds of the survivor's moans and the demonic horseman's laughter echo in your ears as you run away, knowing that you couldn't save him from the start";
-            [need to write win or lose]
-            now Resolution of The Elusive Book is 1;
+			say "     Before the cultist of the horseman can prey on its new victim, a moan from the young man distracts you both, the deed of transforming him was done all while you scuffled with the peacock. The demonic horseman looks at you with a grin, 'Oh~? I guess you were too late to save him, but I do appreciate the effort~' He turns back to the survivor, who is now on all fours, his body shifting and changing as he becomes a new creature of the city.";
+			say "     The cultust goes to take their mouth as Travis continues fucking into their new mate, with what little strength you have left, you quickly leave them to their fate. The sounds of the survivor's moans and the demonic horseman's laughter echo in your ears as you run away, knowing that you couldn't save him from the start";
+			[need to write win or lose]
+			now Resolution of The Elusive Book is 1;
 			now HP of Knott is 1;
-        -- "Observe what happens":
-            say "As no one can see your sin, you wish to watch the depravity of the city up close before you finally head back, Such a giant drooling cock has you far too aroused
-
-Carefully, the demonic horseman aimed himself for the mans rear, smooshing him into a couch as his quiet sobs turn into a deep seated moan
-
-‘Mmm… your mothers juices all over my cock really helps me dig deep, just lay there and let me show you the world you thought to reject’
-
-With a satisfied grunt, Travis pounds away at the man, indenting their stomach as their heavy balls smack into their captive. Very quickly his body cracks from the nanites hooking into his very being.
-
-‘W-Wuh wait!’
-
-‘Mhm?’
-
-Travis slowly pulls his long shaft out with a wet pop, the boy cumming all over the couch as his new red colored skin, under his shaft grew a drooling pussy that glistened with neon cum.
-
-You see his facial expression change over, breathing catching up from almost losing himself. The bastard clearly playing with his food
-
-‘I don’t wanna… become…a freak…’";
-     say "‘Then if you can, tell me where this little woods camp your family talked about going, if you do that, ill stop’
-
-Your fervent pumping  stops, that was definitely the firbolg settlement on their lips
-
-‘I…I -cuh-can't.. Remember…my ass is throbbing…my brain is foggy..’
-
-‘Guess the nanites have already made you useless to me beyond being a cumdump then.’
-
-The drooling horse cock splits off into two, Travis piercing deep within his womb and prostate at the same time as the final strings of sanity in their head break.
-
-‘O-oh goodness sake!’
-
-If you came into the room now, you would just think it was two mutant lovers in a heated breeding tryst. The former male begging for his new womb to be hosed with cum as the glow-in-the dark femcum gets all over the couch and floor.";
-
-if "Weak Psyche" is listed in Feats of Player:
-    say "     You swear to yourself, you want so badly to be the one in his position, that intrusive thought drives you to climax, the demon was surely making sure his mate would understand how much pleasure he will give him for being forever chained to his will… if only it was you on that leash, sucking those huge balls of his right after he was finished filling up one of his mates...";
-WaitLineBreak;
-    say" ‘You will carry my foal and give birth to whatever spawn a mutant puts within you, spread this delicious corruption within this city's walls, and when I come for you I promise nights like this where you will know nothing but the luxury of a full pussy and a worn throat. Am I clear’
-
-‘I was tired of running~ I want more!’
-
-Another jet of femcum and cum spills over the couch, his demonic incubi body growing muscle to bear his masters children. His body slamming back into him to get more inches inside as his body yearned for it.
-
-‘Good Boy… I left your Mom for the Gryphons anyway, I’d known breaking you in be funnier. Here's your reward for finally giving into that gnawing feeling’
-
-With himself fully inserted, his balls flex- spurting a heavy load deep within his new companion as they drunkenly laugh at it.
-
-Shifting back, Travis yoinks himself out, letting the colored cum explode all over the place as he sat to his side, pulling him into a kiss as he pumped at his conjoining shaft. The survivor eagerly sucking back at his face. 
-
-You have no need to stay anymore… you're sure you would be joining them in becoming a feral of the city if you offer yourself, you quickly leave- forever changed from the depravity you witnessed.'";
-SanLoss 10;
-            now Resolution of The Elusive Book is 1;
+		-- "Observe what happens":
+			say "     As no one can see your sin, you wish to watch the depravity of the city up close before you finally head back. Such a giant drooling cock has you far too aroused. Carefully, the demonic horseman aims himself for the man's rear, smooshing him into a couch as his quiet sobs turn into a deep seated moan. 'Mmm... your mothers juices all over my cock really helps me dig deep, just lay there and let me show you the world you thought to reject!' With a satisfied grunt, Travis pounds away at the man, indenting their stomach as their heavy balls smack into their captive. Very quickly his body cracks from the nanites hooking into his very being.";
+			say "     'W-Wuh wait!' the human stammers.";
+			LineBreak;
+			say "     'Mhm?' Travis slowly pulls his long shaft out with a wet pop, the boy cumming all over the couch as his new red colored skin, under his shaft grew a drooling pussy that glistened with neon cum. You see his facial expression change over, breathing catching up from almost losing himself. The bastard is clearly playing with his food.";
+			LineBreak;
+			say "     'I don't wanna... become...a freak...'";
+			WaitLineBreak;
+			say "'Then if you can, tell me where this little woods camp your family talked about going, if you do that, I'll stop.' Your fervent pumping stops, that was definitely the firbolg settlement on their lips.";
+			LineBreak;
+			say "     'I...I -cuh-can't.. Remember...my ass is throbbing...my brain is foggy..'";
+			LineBreak;
+			say "     'Guess the nanites have already made you useless to me beyond being a cumdump then.' The drooling horse cock splits off into two, Travis piercing deep within his victim's womb and prostate at the same time as the final strings of sanity in their head break.";
+			LineBreak;
+			say "     'O-oh goodness sake!' the once-human gasps. If you came into the room now, you would just think it was two mutant lovers in a heated breeding tryst. The former male begging for his new womb to be hosed with cum as the glow-in-the dark femcum gets all over the couch and floor.";
+			WaitLineBreak;
+			if "Weak Psyche" is listed in Feats of Player:
+				say "     You swear to yourself, you want so badly to be the one in his position, that intrusive thought drives you to climax, the demon was surely making sure his mate would understand how much pleasure he will give him for being forever chained to his will... if only it was you on that leash, sucking those huge balls of his right after he was finished filling up one of his mates...";
+			say"     'You will carry my foal and give birth to whatever spawn a mutant puts within you, spread this delicious corruption within this city's walls, and when I come for you I promise nights like this where you will know nothing but the luxury of a full pussy and a worn throat. Am I clear?' Travis promises.";
+			LineBreak;
+			say "     'I was tired of running~ I want more!' the demon's now-willing partner replies. Another jet of femcum and cum spills over the couch, his demonic incubi body growing muscle to bear his master's children. His body slamming back against him to get more inches inside as his body yearns for it.";
+			LineBreak;
+			say "     'Good Boy... I left your Mom for the Gryphons anyway, I knew breaking you in would be funnier. Here's your reward for finally giving into that gnawing feeling.' With himself fully inserted, his balls flex - spurting a heavy load deep within his new companion as they drunkenly laugh at it. Shifting back, Travis yoinks himself out, letting the colored cum explode all over the place as he sits to his side, pulling him into a kiss as he pumps at his conjoining shaft. The survivor eagerly sucking back at his face.";
+			say "     You have no need to stay anymore... you're sure you would be joining them in becoming a feral of the city if you offer yourself, you quickly leave- forever changed from the depravity you witnessed.'";
+			SanLoss 10;
+			now Resolution of The Elusive Book is 1;
 			now HP of Knott is 1;
 
 
