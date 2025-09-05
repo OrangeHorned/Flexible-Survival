@@ -12,7 +12,7 @@ to say losetofathnach:
 	if Player is mpreg_ok, increase T by 1;
 	if anallevel is 3, increase T by 1;
 	if anallevel is 1, now T is 0;
-say "     Having defeated you,The Fathnach man looms over you, a predatory gleam in his eyes. I won, so now its time to do your Big Bro a favor, your gonna love it!";
+	say "     Having defeated you,The Fathnach man looms over you, a predatory gleam in his eyes. I won, so now its time to do your Big Bro a favor, your gonna love it!";
 	if Player is male: [Male]
 		say "     With your exhausted and beaten body, you couldnt resist him as he pulls your clothes off, revealing your [Cock of Player] to the cold air. 'You had me pent up from the start of our play session, its only fair you help me right?' after all.. you look like your gonna need a good drink to help you get back up'.";
 		if Breast size of Player is 0:
@@ -40,8 +40,8 @@ to say beattheFathnach:
 		add "Fuck his pussy" to Fathnach_Choices;
 		add "Fuck his ass." to Fathnach_Choices;
 	add "Make him Shoo" to Fathnach_Choices;
-	let Fathnach_Choices be what the player chooses from Fathnach_Choices;
-	if Fathnach_Choices is:
+	let Fathnach_Choice be what the player chooses from Fathnach_Choices;
+	if Fathnach_Choice is:
 		-- "Fuck his pussy":
 			LineBreak;
 			say "[Plow_Fathnach]";
@@ -62,12 +62,10 @@ to say AssFuck_Fathnach:
 	say "     You make them turn their dumptruck globes around, presenting you with a giant donut of a anus. You give it a few licks before jamming your [Cock of Player] inside, the bull-man wildly yelps and throws his body back into yours- the spent energy of the battle having no effect on their constantly hyperactive sex drive. They cum three times into the pavement before your able to finally reach yours. You Giant-kin on the floor as you continue your journey";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Fathnach";
 
-
-
 Section 2 - Creature Insertion
 
 to say Fathnachdesc:
-	say "     You turn to the corner in the High Rise into a behemoth of a infected, the 10 foot tall Firbolg chuckles as he drools. 'Oh, another brother to play with! Big Bros in need of help.... Come here~' His tone of voice had no ounce of malicious intent, but from the swaying of his tail and his muscles flexing, it's clear he sees you as his next target. Squeezing his pecs in anticipation, he begins his assault!;
+	say "     You turn to the corner in the High Rise into a behemoth of a infected, the 10 foot tall Firbolg chuckles as he drools. 'Oh, another brother to play with! Big Bros in need of help.... Come here~' His tone of voice had no ounce of malicious intent, but from the swaying of his tail and his muscles flexing, it's clear he sees you as his next target. Squeezing his pecs in anticipation, he begins his assault!";
 
 Table of CombatPrep (continued)
 name(text)	PrepFunction(text)
@@ -107,13 +105,13 @@ when play begins:
 	now victory entry is "[losetoFathnach]"; [ Text when monster wins. This plays when you lose or submit.]
 	now desc entry is "[Fathnachdesc]"; [ Description of the creature when you encounter it. This plays before you start a fight.]
 	now face entry is "that of a Fathnach, A very bulky face with slight stubble to compliment a more masculine body type"; [ Face description, format as "Your face is [Face of Player]." ]
-	now body entry is " now one of blueish green skin that makes you look like that of the mountainous forests, your giant pecs and ass bubble from your giant body that could feed a entire family of people. Your arms and legs jiggle until you flex them to become a iron wall of defense";  [Body description, format as "Your body is [Body of Player.]"]
+	now body entry is "now one of blueish green skin that makes you look like that of the mountainous forests, your giant pecs and ass bubble from your giant body that could feed a entire family of people. Your arms and legs jiggle until you flex them to become a iron wall of defense";  [Body description, format as "Your body is [Body of Player.]"]
 	now skin entry is "that of a Fathnatch, soft to the touch, you could run your fingers over your body for hours if time wasn't a ongoing issue."; [ Skin. Format as Your skin is [Skin of Player.]" ]
 	now tail entry is "Your large behind was signed to milk the cocks of those in the city and leave their balls completely empty, your hole itself puckers as you marvel at your mounds, with the cute little bovine tail wagging from your amusement."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
-	now cock entry is "Your cock is a very short yet girthy rod that drools for release."; [ Cock. Format as "You have a 'size' [Cock of Player] cock." ]
+	now cock entry is "[one of]bulky[or]drooling[or]thick[at random]"; [ Cock. Format as "You have a 'size' [Cock of Player] cock." ]
 	now face change entry is "it stretches and warps, growing and pulling forward into a short ursine mouth. Your  teeth sharpen into points and your lips develop a little bit of give, all the better for baring your teeth. Two fluffy rounded ears sprout from the top of your head, twitching at the slightest noise"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
-	now body change entry is "Your body tingles as it becomes hulking and weighty, yet cut and muscular. You broad shoulders and strong muscles peter off in a V-shape toward your waist, where a six pack sits. Your fingers grow claws, and the tips of them sport soft pads. Your feet become wider, with sharp nails and spread paws to support your weight"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
-	now skin change entry is "your skin grows slightly damp, as though you're prone to sweating, and grows a thick layer of fluffy fur that soaks up the scents and moisture from it"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now body change entry is "it becomes hulking and weighty, yet cut and muscular. You broad shoulders and strong muscles peter off in a V-shape toward your waist, where a six pack sits. Your fingers grow claws, and the tips of them sport soft pads. Your feet become wider, with sharp nails and spread paws to support your weight"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "it grows slightly damp, as though you're prone to sweating, and grows a thick layer of fluffy fur that soaks up the scents and moisture from it"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
 	now ass change entry is "it becomes rounded and bouncy, with just enough muscle to maintain its shape, topped with a nub of a tail that sits at the apex"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
 	now cock change entry is "takes on a distinctly bovine shape. It has a distinct funky smell that pours off of it no matter what you do, like you've been at the gym for hours without a shower"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 25; [These stats affect the creature's combat potential when you encounter it as a monster.]
@@ -126,7 +124,7 @@ when play begins:
 	now HP entry is 77; [ The monster's starting HP. ]
 	now lev entry is 5; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 9; [ Monster's average damage when attacking. ]
-	now area entry is "High"; [ "Outside" "Mall" "Park" "Beach" etc... This determines where the creature will appear as an enemy. "Nowhere" means they can't be "hunted" and won't show up during "explore" commands.]
+	now area entry is "High Rise"; [ "Outside" "Mall" "Park" "Beach" etc... This determines where the creature will appear as an enemy. "Nowhere" means they can't be "hunted" and won't show up during "explore" commands.]
 	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now Cock Length entry is 15; [ Length infection will make cock grow to if cocks. ]
 	now Ball Size entry is 8; [ Cock width, more commonly used for ball size. ]
@@ -154,29 +152,38 @@ when play begins:
 	now BannedStatus entry is false; [Leave on false. The game will ban the character based on player choices.]
 
 Table of Game Objects (continued)
+name	desc	weight	object
+"fathnach tuft"	"A tuft of fur that looks like it has been pulled out of the coat of a fathnach. It's nicely soft."	0	fathnach tuft
 
-instead of sniffing Fathnach Tuft Hair:
+fathnach tuft is a grab object.
+Usedesc of fathnach tuft is "[FathnachTuftUse]".
+It is temporary.
+
+to say FathnachTuftUse:
+	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	infect "Fathnach";
+
+instead of sniffing Fathnach Tuft:
 	say "     The fur has a very strong, animal-like scent.";
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "Fathnach Cum Pollen"	"A plastic bottle containing cum with bits of yellow pollen orbs inside, labeled 'Fathnach Cum Pollen'."	0	Fathnach Cum Pollen
 
-Fathnach cum is a grab object.
-Fathnach cum is infectious.
-Strain of Fathnach cum is "Fathnach".
-Usedesc of Fathnach cum is "[FathnachCumPollenuse]".
+Fathnach Cum Pollen is a grab object.
+Fathnach Cum Pollen is infectious.
+Strain of Fathnach Cum Pollen is "Fathnach".
+Usedesc of Fathnach Cum Pollen is "[FathnachCumPollenuse]".
 
 to say FathnachCumPollenuse:
-	say "Lifting the plastic bottle to your mouth may have not been the best idea, but it sure tastes like it. A sweet tasting honeydew with a hint of floral notes spreads into your body, you feel yourself tingling all over with excitement- almost with a thirst for more.";
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "Lifting the plastic bottle to your mouth may have not been the best idea, but it sure tastes like it. A sweet tasting honeydew with a hint of floral notes spreads into your body, you feel yourself tingling all over with excitement- almost with a thirst for more. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 
 to say GenerateTrophyList_Fathnach: [The list of item drops available to players after defeating the creature! You can make things as rare or as common as you like. Items must have an entry to drop, so don't make things up randomly without creating the item first!]
 	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
 	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
-		add "Fathnach Tuft Hair" to CombatTrophyList;
+		add "Fathnach Tuft" to CombatTrophyList;
 	if a random chance of (40 + LootBonus) in 100 succeeds:
 		add "Fathnach Cum Pollen" to CombatTrophyList;
 	if Debug is at level 10:

@@ -63,7 +63,7 @@ Instead of conversing the GivingFirbolg:
 
 to say GivingFirbolgTalkMenu:
 	say "[line break]";
-	say "'Im a open book, what do you need?' Giving seems to be in a good mood for talking";
+	say "'Im a open book, what do you need?' Giving seems to be in a good mood for talking.";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -77,7 +77,7 @@ to say GivingFirbolgTalkMenu:
 	now sortorder entry is 2;
 	now description entry is "Have Giving tell you a little about his time in the city.";
 	[]
-	if HP of Giving is 2:
+	if HP of GivingFirbolg is 2:
 		choose a blank row in table of fucking options;
 		now title entry is "About Knott";
 		now sortorder entry is 3;
@@ -116,7 +116,7 @@ to say GivingFirbolgTalkMenu:
 to say GivingTalk1:
 	say "     'Well, as you know, I'm Giving, had a former name but everyone just sorta called me Cappy, A Skipper for a Sea Scout Group near the port. Lotta Family members who were into sea related jobs so it kinda was a given, Apocalypse happened, I single handedly got my troop to a checkpoint to get them to safety, but I couldn't in good conscience leave survivors alone in this place, somehow didn't end up infected for a long time.' The Firbolg flexes his bicep eagerly to show off the gun show, the scars that surround its edges showing a history of rough rides and close calls with not-too-kind strangers. 'Was just near some river in the forest trying to filter the water to drink when I saw this little guy-- which I now know are called Baegs- just all alone, honestly when he confided in me about how much the others were struggling to get by, I felt this... urge you know.'";
 	WaitLineBreak;
-	say "     You don't know what he means. 'So I asked him to fuck me, call it an impulse, but its hard to explain, when I turned into this I knew I made the right choice.' There is a slight pause as Giving sighs out 'It was... really just his sweet voice and hearing their backstory that made me cave into this infection. Alongside the possibility I could become a father, although 'Daddy' is all our Fathers technically, it dosen't mean I can't take care of the more less experienced Firbolgs when their just getting over their lusts'";
+	say "     You don't know what he means. 'So I asked him to fuck me, call it an impulse, but its hard to explain, when I turned into this I knew I made the right choice.' There is a slight pause as Giving sighs out 'It was... really just his sweet voice and hearing their backstory that made me cave into this infection. Alongside the possibility I could become a father, although 'Daddy' is all our Fathers technically, it dosen't mean I can't take care of the more less experienced Firbolgs when their just getting over their lusts.'";
 
 to say GivingTalk2:
 	if a random number between 1 and 5 is:
@@ -127,9 +127,9 @@ to say GivingTalk2:
 		-- 3: [Short Story 3]
 			say "     'I think on a wholesome note, one of my adventures actually was helping a human get to the commune. A guy was stuck high in a tree and was offering me stuff but I just told him I didn't need anything to save him. He thanked me profusely for giving him some food and water, guided him here and he's been the happiest face around the snowy forest.";
 		-- 4: [Short Story 4]
-			say "     'Well... uh... I was near the docks and... I saw this poor puppy trying to lick some white stuff, the poor thing was already transforming. I sometimes wonder if I did the right thing, holding that thing in my arms as I tried to feed it something. I did it for a few days, wondering if it would fight the nanites, die or worse... All I know is one day, it wasn't in the place I found it...' Giving looks like he's about to cry before rubbing his eyes. 'You can't save everything, all you can do is your best'";
+			say "     'Well... uh... I was near the docks and... I saw this poor puppy trying to lick some white stuff, the poor thing was already transforming. I sometimes wonder if I did the right thing, holding that thing in my arms as I tried to feed it something. I did it for a few days, wondering if it would fight the nanites, die or worse... All I know is one day, it wasn't in the place I found it...' Giving looks like he's about to cry before rubbing his eyes. 'You can't save everything, all you can do is your best.'";
 		-- 5: [Short Story 5]
-			say "     Let's see... the commune wanted me to get some sewing kits, since I'm the one who's mostly out and about, I usually know where to get some things. Heading off to the High Rises, I was about to check out one shop I've seen when I passed by only to see a bunch of foot soldiers scramble out of there. Luckily apparently at least some of the troops know that some blue skinned figure sometimes helps them out because they could have pumped me with lead, apparently the fire exit was a no-go and they were just trapped, only thing I asked them for is just confirmation if there's any sewing supplies left inside-- which luckily was a yes";
+			say "     Let's see... the commune wanted me to get some sewing kits, since I'm the one who's mostly out and about, I usually know where to get some things. Heading off to the High Rises, I was about to check out one shop I've seen when I passed by only to see a bunch of foot soldiers scramble out of there. Luckily apparently at least some of the troops know that some blue skinned figure sometimes helps them out because they could have pumped me with lead, apparently the fire exit was a no-go and they were just trapped, only thing I asked them for is just confirmation if there's any sewing supplies left inside-- which luckily was a yes.";
 
 to say  GivingTalk3:
 	say "     'Oh Knott? Hes a good guy but well, hes kinda still dealing with the infection impulses as well as the fact that he is scared to show himself to the survivor group he was apart of' Giving scratches the back of his head 'Oh tell you what, im in trouble due to transforming him without asking Daddy, so maybe you could grab his old things and bring it to him?' You ask him what could he gather, 'Oh im not sure, you gotta ask him yourself, I didnt want to pry so I know the bare minimum.'";
@@ -176,14 +176,14 @@ to say GivingSexMenu:
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
-			say "	 You step back from the firbolg, shaking your head slightly as he gives a questioning look.";
+			say "     You step back from the firbolg, shaking your head slightly as he gives a questioning look.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say GivingSex1: [Firbolg Breeding] [Requires Cock, need something to stop players from fucking them without cock, Firbolg pregancy and infection coming soon]
-	say "     You begin to push yourself into Giving's giant body, rubbing your [CockName of Player] penis into his thigh, telling him that you've noticed how pent up he is all the time. The bovine looks in shock at your sudden depravity. 'Uh, well...' With a fearful snort, he grabs onto his crotch in anticipation. Remembering how hard Knott fucked him, you know that cunt of his must be so hard to please, let alone when he's out all the time far from the cock that helps him satiate the nanites' impulse. 'If I have to admit...' With another long pause, he clicks at his straps letting that perfect fertile mancunt out to the world, 'Watching all these people fucking like animals, really gets your brain wondering how good it really is.' His fat clit-cock throbbed, practically drooling for what it already knew was coming'";
+	say "     You begin to push yourself into Giving's giant body, rubbing your [CockName of Player] penis into his thigh, telling him that you've noticed how pent up he is all the time. The bovine looks in shock at your sudden depravity. 'Uh, well...' With a fearful snort, he grabs onto his crotch in anticipation. Remembering how hard Knott fucked him, you know that cunt of his must be so hard to please, let alone when he's out all the time far from the cock that helps him satiate the nanites' impulse. 'If I have to admit...' With another long pause, he clicks at his straps letting that perfect fertile mancunt out to the world, 'Watching all these people fucking like animals, really gets your brain wondering how good it really is.' His fat clit-cock throbbed, practically drooling for what it already knew was coming.";
 	say "     Both of you retreat to a nearby forest clearing, the blue-skinned hunk leaning onto a tree with his legs spread out, 'Daddy doesn't like it when we fuck out of the commune, so just keep this between you and me' disrobing yourself, you crawl on fours to push your head between his gracious pillows, frotting your [cock size desc of player] on their flower canal. His chest heaves deeply, 'Fuck... it's just so good pushing them out though... watching my belly just swell with my little brothers['] seed, and now I'm letting an outsider knock me up.' Both of you share an intense kiss as you place your hand behind his, slurping his thick tongue down your throat, but it wasn't because you wanted to kiss him, it was to make sure he didn't let the whole forest hear you insert your [CockName of Player] cock deep into his tight walls. Inch by inch, you watch his eyes shoot up into the sky, your lubed cock getting yet more from his flowery clit-cock spraying slimy femcum on you, Giving's pleasure more than obvious, to the point you have to hold him back from smashing his cunt upwards into your groin. With a surprise, you fully hilt yourself and see him looking down needily for more.";
 	WaitLineBreak;
 	say "     With mouth-sharing breaths, the passionate fuck starts, the heavy smell of brown sugar emanates, the Firbolg sweating a storm just with a few strokes. His tongue is limp in your mouth as all thoughts beyond pleasing his needy pussy vanish, pulling away from his tongue nets you a look at his stuffed pecs rocking with your heavy thrusts, pushing your aroused cock to grow even harder deep within his hole. To his credit, your partner tries his best to keep his moans and whimpers quiet, but rotating your hips in any direction makes him scream silently. You think that was the point when you couldn't care less for the infection as your [bodydesc of Player] explore his bubbly muscles, watching each shake and jiggle like jelly in ecstasy.";
