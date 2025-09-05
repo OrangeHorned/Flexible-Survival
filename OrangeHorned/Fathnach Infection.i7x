@@ -13,18 +13,17 @@ to say losetofathnach:
 	if anallevel is 3, increase T by 1;
 	if anallevel is 1, now T is 0;
 say "     Having defeated you,The Fathnach man looms over you, a predatory gleam in his eyes. I won, so now its time to do your Big Bro a favor, your gonna love it!";
-	if Player is male [Male]
-			say "     With your exhausted and beaten body, you couldnt resist him as he pulls your clothes off, revealing your [Cock of Player] to the cold air. 'You had me pent up from the start of our play session, its only fair you help me right?' after all.. you look like your gonna need a good drink to help you get back up'.";
-				if Breast size of Player is 0:
-				say "     'Mmmph, after all you need some man-milk to grow big and strong' He smashes his gigantic moobs into your flat chest, pushing aggressively into your frame. ";
-			else if Breast size of Player > 4:
-				say "     'Looks like you been feeding people like a proper bro, but lemme show you a better way!'";
-			else:
-				say "     The Fathnach mashes his pecs into your chest, 'My nipples have been eager for a milking~'";
+	if Player is male: [Male]
+		say "     With your exhausted and beaten body, you couldnt resist him as he pulls your clothes off, revealing your [Cock of Player] to the cold air. 'You had me pent up from the start of our play session, its only fair you help me right?' after all.. you look like your gonna need a good drink to help you get back up'.";
+		if Breast size of Player is 0:
+			say "     'Mmmph, after all you need some man-milk to grow big and strong' He smashes his gigantic moobs into your flat chest, pushing aggressively into your frame. ";
+		else if Breast size of Player > 4:
+			say "     'Looks like you been feeding people like a proper bro, but lemme show you a better way!'";
+		else:
+			say "     The Fathnach mashes his pecs into your chest, 'My nipples have been eager for a milking~'";
 		say "     With a excited Moo, the Giant-kin rubs their cock, using some sort of magic on his girthy rod to transform it into a slick pussy, you faintly see their eyes under their bangs reveal their crazed nature. His rugged hands rub at your shaft, laying his pussy lips in between his folds. 'Nothin' better in the world than some unprotected breeding, you better bet your fucking me till im swollen with little calves!.' With little fanfare, you watch your cock go in their heavily lubricated depths with one go- causing involuntary moans from the both of you.";
 		say "     The Firbolg hypnotically rides you, pulling his nipples tightly to make milk go all over the place. Even if you wanted to latch on- the frantic riding of the cow-man keeps you unable to latch on. His tight pussy warmly strangles your cock smashing your balls with every slam of his girthy frame onto yours.'This is only gonna end when you give big bro a nice warm load, so just cough it up!'";
-		else:
-			say "     He was going to crush you under all that weight, the pleasure hits you hard, your body entirely stiff as you cum huge wads of cum straight into their fertile folds. The Firbolg lets out a long moo as he straddles you for a little longer. Once he was sure you are out of cum, the man stands up, rubbing his battered pussy eagerly, 'Aaaah, that's the stuff...' you couldn't catch what they mumble to themself as they walk off into the city.";
+		say "     He was going to crush you under all that weight, the pleasure hits you hard, your body entirely stiff as you cum huge wads of cum straight into their fertile folds. The Firbolg lets out a long moo as he straddles you for a little longer. Once he was sure you are out of cum, the man stands up, rubbing his battered pussy eagerly, 'Aaaah, that's the stuff...' you couldn't catch what they mumble to themself as they walk off into the city.";
 		CreatureSexAftermath "Fathnach" receives "PussyFuck" from "Player";
 		say "     Before you could really understand all that's going on, the beast throws you to the ground, he turns around to straddle you with his rear to your face just so you can see his twitching asshole leak like a pussy. 'See that? Your about to give me a good filling!' You get no say as he consumes your face into his stretchy ass,his musk overpowering your braincells quickly into submission. You never wanted anymore than to fuck such a perfect hole.";
 		say "     When he sees your [Cock of Player] at full mast, he finally gives you fresh air, your face covered in his lubed-ass juice keeps your cock leaking, He doesn't bother with any foreplay as his hole sucks it in one go, quickly bouncing away, giving frantic pants of joy from the sensation of a full ass. It doesn't take long from his tight hole squelching greedily to have you churning ropes inside. He doesn't seem to notice as he continues riding you until you pass out from exhaustion, you only come too when he's fully gone, leaving your body a mess from his sweat- which oddly enough fills you with some energy to get back up again even after all of that.";
@@ -99,7 +98,6 @@ when play begins:
 	add "Fathnach" to infections of AlwaysHeatList;
 	add "Fathnach" to infections of Birthlist;
 	add "Fathnach" to infections of MpregList;
-
 	now Name entry is "Fathnach"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy Name entry is "Fathnach"; [ Specific name of unique enemy. ]
