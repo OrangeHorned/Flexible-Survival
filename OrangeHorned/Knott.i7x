@@ -77,7 +77,7 @@ to say KnottTalkMenu:
 		now sortorder entry is 3;
 		now description entry is "Ask Knott about what items might be at his old stomping grounds.";
 	[]
-	if HP of Knott is 2: [Player has the book]
+	if HP of Knott is 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Give Knott the book";
 		now sortorder entry is 4;
@@ -116,7 +116,7 @@ to say KnottTalkMenu:
 
 to say KnottTalk1: [The actual scene the talk menu points to!]
 	say "     The former older man seems to confusingly look at you, he carefully knits to himself with his satchel next to him- all while he keeps another eye on Giving. 'I'll keep it brief, honestly I've always been a man who would rather speak with his actions or grand speech than very basic small talk, Giving told me my new nickname Knott considering I was once a marriage priest, but I had... other urges that I had to attend to. Was visiting this place for a funeral when the whole... what did those young ones call it, the 'furry apocalypse' happened'.";
-	say "     With a palm through his new hair, he continued, 'Part of me was always interested in what was causing all those people to go insane, now I get it, this fresh feeling of old vitality coming back to me, no back pain, I feel great, like the man I was almost 50 years ago- and I know this time it ain't my brain failing me!'";
+	say "With a palm through his new hair, he continued, 'Part of me was always interested in what was causing all those people to go insane, now I get it, this fresh feeling of old vitality coming back to me, no back pain, I feel great, like the man I was almost 50 years ago- and I know this time it aint my brain failing me!'";
 
 to say KnottTalk2:
 	say "     'Mostly probably doing what God possibly intended me to do, these people here need guidance, someone to talk to about all that ails them, they welcomed me with open arms, so they should only expect any who have walked the path of righteousness to help them out.' You ask a side question on what caused them to give up the priest's life, Knott's face lightens up as he tries to hide his humane impulse, 'I do not wish to speak of it, especially not right now in this given time, I just.... It comes with its own baggage you see? When I get more comfortable here maybe ill be in the mood for such gab.'";
@@ -142,7 +142,7 @@ instead of fucking Knott:	[Same as conversing, but works when the player says "F
 	if (lastfuck of Knott - turns < 6):
 		say "     'The body of mine even still needs breaks, should we have a little coffee or chat first?'";
 	else if HP of Knott < 1 or Elusive Book is not resolved:
-		say "     'I am not in the mood for that right now, I have other things on my mind.' Knott isnt going to budge until you resolve the Elusive Book quest, try checking the High Rise District.";
+		say "     	 'I am not in the mood for that right now, I have other things on my mind.' Knott isnt going to budge until you resolve the Elusive Book quest, try checking the High Rise District.";
 	else:
 		say "[KnottSexMenu]";
 
